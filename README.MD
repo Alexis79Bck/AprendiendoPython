@@ -1,4 +1,4 @@
-# Python Tutorial
+# Aprendiendo Python - Tutorial
 
 ## Descripción
 Este proyecto documenta mi camino de aprendizaje de Python desde cero, siguiendo los tutoriales de varios profesionales de desarrollo como lo es Brais Moure, Hola Mundo. Aquí encontrarás ejemplos de código, explicaciones y comentarios que me han ayudado a entender mejor este lenguaje de programación.
