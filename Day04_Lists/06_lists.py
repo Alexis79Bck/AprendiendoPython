@@ -1,4 +1,4 @@
-'''
+"""
 Para declarar e inicializar una lista, se puede hacer de 2 maneras:
 1.- Usando la funcion list(). Ejemplo:
     - empty_list = list()
@@ -19,34 +19,7 @@ como lista.
 Una lista no solo puede contener un conjunto de elementos de un mismo tipo, puede tambien 
 componerse de elementos de diferentes tipos de datos. Por ejemplo:
     - user_info = ['Johnny', 'Doe', 35, 1.79, 84.65, True, 'j.doe@example.com']
-'''
-
-# Ejemplo 1: Usando la función list()
-empty_list = list()
-print("Lista vacía:", empty_list)
-
-# Para crear una lista a partir de un valor iterable
-first_5_numbers = list((1, 2, 3, 4, 5)) #Pasando una tupla a lista
-print("Primeros 5 números:", first_5_numbers)
-
-hello_world_chars_list = list("Hello World") #Pasando una cadena a lista
-print("Lista de caracteres de Hello World:", hello_world_chars_list)
-
-# Ejemplo 2: Usando corchetes []
-empty_list = []
-print("Lista vacía:", empty_list)
-
-colors_list = ['roja', 'azul', 'amarillo', 'negro', 'blanco']
-print("Lista de colores:", colors_list)
-
-even_numbers = [2, 4, 6, 8, 10]
-print("Números pares:", even_numbers)
-
-# Lista con diferentes tipos de datos
-user_info = ['Johnny', 'Doe', 35, 1.79, 84.65, True, 'j.doe@example.com']
-print('Datos de Usuario:', user_info)
-
-'''
+    
 Accesos a los elementos de una lista.
 Para acceder a los elementos de una lista, como es bien sabido, se usa un indice.
 El indice es el indicador para localizar el elemento y se representa de la siguiente manera:
@@ -62,29 +35,10 @@ Toda lista inicia su indice a partir del valor 0
 Tambien se puede localizar un elemento de una lista, de forma reversa usando valores negativos en 
 el indice, a partir de -1:
 
-    print(fruits_list[-1]) #'pera'
-    print(fruits_list[-4]) #'naranja'
-    print(fruits_list[-2]) #'limon'
+      print(fruits_list[-1]) #'pera'
+      print(fruits_list[-4]) #'naranja'
+      print(fruits_list[-2]) #'limon'
     
-'''
-
-# Ejemplo de acceso a elementos de una lista
-fruits_list = ['mango', 'naranja', 'manzana', 'limon', 'pera']
-
-# Acceso con índices positivos
-print("\nAcceso con índices positivos:")
-print("fruits_list[1] ->", fruits_list[1])  # 'naranja'
-print("fruits_list[4] ->", fruits_list[4])  # 'pera'
-print("fruits_list[2] ->", fruits_list[2])  # 'manzana'
-print("fruits_list[0] ->", fruits_list[0])  # 'mango'
-
-# Acceso con índices negativos
-print("\nAcceso con índices negativos:")
-print("fruits_list[-1] ->", fruits_list[-1])  # 'pera'
-print("fruits_list[-4] ->", fruits_list[-4])  # 'naranja'
-print("fruits_list[-2] ->", fruits_list[-2])  # 'limon'
-
-'''
 Desempaquetando una lista:
 
 Desempaquetar se refiere pasar los elementos de una lista a un conjunto de variables,
@@ -93,11 +47,11 @@ para almacenarlo de forma independiente y tratarlo de manera atomica.
 Seguiremos con el ejemplo de lista fruits_list.
 
 fruit_one, fruit_two, fruit_three, fruit_four, fruit_five = fruits_list
-print('Fruta 1:', fruit_one)
-print('Fruta 2:', fruit_two)
-print('Fruta 3:', fruit_three)
-print('Fruta 4:', fruit_four)
-print('Fruta 5:', fruit_five)
+      print('Fruta 1:', fruit_one)
+      print('Fruta 2:', fruit_two)
+      print('Fruta 3:', fruit_three)
+      print('Fruta 4:', fruit_four)
+      print('Fruta 5:', fruit_five)
 
 Aspectos a destacar antes de utilizar el desempaquetado:
     - Número de variables: El número de variables en el lado izquierdo de la asignación 
@@ -107,28 +61,7 @@ Aspectos a destacar antes de utilizar el desempaquetado:
                            de elementos en una lista.
     - Manejo de excepciones: Si la lista tiene menos elementos que las variables, se producirá un error. 
                            Se puede agregar un bloque try-except para manejar esta situación.
-'''
-
-# Desempaquetando fruits_list
-print("\nDesempaquetando la lista fruit_list:")
-fruit_one, fruit_two, fruit_three, fruit_four, fruit_five = fruits_list
-print('Fruta 1:', fruit_one)
-print('Fruta 2:', fruit_two)
-print('Fruta 3:', fruit_three)
-print('Fruta 4:', fruit_four)
-print('Fruta 5:', fruit_five)
-
-print("\nDesempaquetando la lista user_info:")
-first_name, last_name, age, height, weight, is_active, email = user_info
-print('Nombre:', first_name)
-print('Apellido:', last_name)
-print('Edad:', age)
-print('Estatura (m):', height)
-print('Peso (Kg):', weight)
-print('Esta Activo:', is_active)
-print('Email:', email)
-
-'''
+                           
 Operaciones con listas:
 
 1. Verificar longitud de una lista:
@@ -157,7 +90,93 @@ Operaciones con listas:
    - sort(): Ordena la lista en orden ascendente (modifica la lista original)
    - reverse(): Invierte el orden de los elementos
    - sorted(): Retorna una nueva lista ordenada (no modifica la original)
-'''
+   
+Otras operaciones con listas:
+
+1. Slicing (Rebanado):
+   - lista[inicio:fin:paso] -> Obtiene una sublista desde inicio hasta fin-1, con un paso opcional
+   - Se pueden usar índices negativos
+   - Si se omite inicio, comienza desde el principio
+   - Si se omite fin, llega hasta el final
+   
+2. Copiar listas:
+   - copy(): Crea una copia superficial de la lista
+   - list(): Crea una nueva lista
+   - slicing [:]: Crea una copia de toda la lista
+   
+3. Comprensión de listas (List Comprehension):
+   - Forma concisa de crear listas basadas en listas existentes
+   - Sintaxis: [expresion for elemento in iterable if condicion]
+   
+4. Operaciones matemáticas:
+   - sum(): Suma todos los elementos numéricos
+   - max(): Encuentra el valor máximo
+   - min(): Encuentra el valor mínimo
+   
+5. Modificación múltiple:
+   - Multiplicar lista: Repite los elementos
+   - Asignación múltiple: Cambia varios elementos a la vez
+"""
+
+# Ejemplo 1: Usando la función list()
+empty_list = list()
+print("Lista vacía:", empty_list)
+
+# Para crear una lista a partir de un valor iterable
+first_5_numbers = list((1, 2, 3, 4, 5)) #Pasando una tupla a lista
+print("Primeros 5 números:", first_5_numbers)
+
+hello_world_chars_list = list("Hello World") #Pasando una cadena a lista
+print("Lista de caracteres de Hello World:", hello_world_chars_list)
+
+# Ejemplo 2: Usando corchetes []
+empty_list = []
+print("Lista vacía:", empty_list)
+
+colors_list = ['roja', 'azul', 'amarillo', 'negro', 'blanco']
+print("Lista de colores:", colors_list)
+
+even_numbers = [2, 4, 6, 8, 10]
+print("Números pares:", even_numbers)
+
+# Lista con diferentes tipos de datos
+user_info = ['Johnny', 'Doe', 35, 1.79, 84.65, True, 'j.doe@example.com']
+print('Datos de Usuario:', user_info)
+
+# Ejemplo de acceso a elementos de una lista
+fruits_list = ['mango', 'naranja', 'manzana', 'limon', 'pera']
+
+# Acceso con índices positivos
+print("\nAcceso con índices positivos:")
+print("fruits_list[1] ->", fruits_list[1])  # 'naranja'
+print("fruits_list[4] ->", fruits_list[4])  # 'pera'
+print("fruits_list[2] ->", fruits_list[2])  # 'manzana'
+print("fruits_list[0] ->", fruits_list[0])  # 'mango'
+
+# Acceso con índices negativos
+print("\nAcceso con índices negativos:")
+print("fruits_list[-1] ->", fruits_list[-1])  # 'pera'
+print("fruits_list[-4] ->", fruits_list[-4])  # 'naranja'
+print("fruits_list[-2] ->", fruits_list[-2])  # 'limon'
+
+# Desempaquetando fruits_list
+print("\nDesempaquetando la lista fruit_list:")
+fruit_one, fruit_two, fruit_three, fruit_four, fruit_five = fruits_list
+print('Fruta 1:', fruit_one)
+print('Fruta 2:', fruit_two)
+print('Fruta 3:', fruit_three)
+print('Fruta 4:', fruit_four)
+print('Fruta 5:', fruit_five)
+
+print("\nDesempaquetando la lista user_info:")
+first_name, last_name, age, height, weight, is_active, email = user_info
+print('Nombre:', first_name)
+print('Apellido:', last_name)
+print('Edad:', age)
+print('Estatura (m):', height)
+print('Peso (Kg):', weight)
+print('Esta Activo:', is_active)
+print('Email:', email)
 
 print("\nOperaciones con listas:")
 print("=======================")
@@ -221,34 +240,6 @@ sorted_numbers = sorted(numbers)
 print("Nueva lista ordenada (sorted):", sorted_numbers)
 print("Lista original sin cambios:", numbers)
 
-'''
-Otras operaciones con listas:
-
-1. Slicing (Rebanado):
-   - lista[inicio:fin:paso] -> Obtiene una sublista desde inicio hasta fin-1, con un paso opcional
-   - Se pueden usar índices negativos
-   - Si se omite inicio, comienza desde el principio
-   - Si se omite fin, llega hasta el final
-   
-2. Copiar listas:
-   - copy(): Crea una copia superficial de la lista
-   - list(): Crea una nueva lista
-   - slicing [:]: Crea una copia de toda la lista
-   
-3. Comprensión de listas (List Comprehension):
-   - Forma concisa de crear listas basadas en listas existentes
-   - Sintaxis: [expresion for elemento in iterable if condicion]
-   
-4. Operaciones matemáticas:
-   - sum(): Suma todos los elementos numéricos
-   - max(): Encuentra el valor máximo
-   - min(): Encuentra el valor mínimo
-   
-5. Modificación múltiple:
-   - Multiplicar lista: Repite los elementos
-   - Asignación múltiple: Cambia varios elementos a la vez
-'''
-
 print("\nOtras operaciones con listas:")
 print("=============================")
 
@@ -301,4 +292,3 @@ print("Lista multiplicada por 3:", simple_list * 3)
 numbers = [0, 0, 0, 0, 0]
 numbers[1:4] = [1, 2, 3]  # Cambia elementos del índice 1 al 3
 print("Lista después de modificación múltiple:", numbers)
-

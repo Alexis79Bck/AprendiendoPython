@@ -6,29 +6,29 @@ Ejercicios de funciones en Python.
 2.- El área de un círculo se calcula de la siguiente manera: área = π x r x r.
 Escribe una función que calcule calculate_area_of_circle.
 
-3.- Escriba una función llamada add_all_nums que tome una cantidad arbitraria de 
-argumentos y sume todos los argumentos. Verifique si todos los elementos de la 
+3.- Escriba una función llamada add_all_nums que tome una cantidad arbitraria de
+argumentos y sume todos los argumentos. Verifique si todos los elementos de la
 lista son de tipo numérico. Si no es así, proporcione una respuesta razonable.
 
-4.- La temperatura en °C se puede convertir a °F usando esta fórmula: 
-        °F = (°C x 9/5) + 32. 
+4.- La temperatura en °C se puede convertir a °F usando esta fórmula:
+        °F = (°C x 9/5) + 32.
 Escriba una función que convierta °C a °F, convert_celsius_to_fahrenheit.
 
-5.- Escriba una función llamada check_season, toma un parámetro de mes y 
+5.- Escriba una función llamada check_season, toma un parámetro de mes y
 devuelve la temporada: Otoño, Invierno, Primavera o Verano.
 
-6.- Escriba una función llamada calculate_slope que devuelva la pendiente de 
+6.- Escriba una función llamada calculate_slope que devuelva la pendiente de
 una ecuación lineal
 
-7.- La ecuación cuadrática se calcula de la siguiente manera: 
-        ax² + bx + c = 0. 
-Escriba una función que calcule el conjunto de soluciones de una ecuación 
+7.- La ecuación cuadrática se calcula de la siguiente manera:
+        ax² + bx + c = 0.
+Escriba una función que calcule el conjunto de soluciones de una ecuación
 cuadrática, solve_quadratic_eqn.
 
-8.- Declara una función llamada print_list. Esta toma una lista como parámetro 
+8.- Declara una función llamada print_list. Esta toma una lista como parámetro
 e imprime cada elemento de la lista.
 
-9.- Declara una función llamada reverse_list. Toma una matriz como parámetro 
+9.- Declara una función llamada reverse_list. Toma una matriz como parámetro
 y devuelve el inverso de la matriz (usa bucles).
             ejemplo:
                 print(reverse_list([1, 2, 3, 4, 5]))
@@ -36,10 +36,10 @@ y devuelve el inverso de la matriz (usa bucles).
                 print(reverse_list1(["A", "B", "C"]))
                 # ["C", "B", "A"]
 
-10.- Declara una función llamada capitalize_list_items. Toma una lista como parámetro 
+10.- Declara una función llamada capitalize_list_items. Toma una lista como parámetro
 y devuelve una lista de elementos en mayúsculas.
 
-11.- Declara una función llamada add_item. Esta acepta una lista y un elemento como 
+11.- Declara una función llamada add_item. Esta acepta una lista y un elemento como
 parámetros. Devuelve una lista con el elemento agregado al final.
             ejemplo:
                 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
@@ -47,7 +47,7 @@ parámetros. Devuelve una lista con el elemento agregado al final.
                 numbers = [2, 3, 7, 9]
                 print(add_item(numbers, 5))   # [2, 3, 7, 9, 5]
 
-12.- Declara una función llamada remove_item. Esta toma como parámetros una lista y 
+12.- Declara una función llamada remove_item. Esta toma como parámetros una lista y
 un elemento. Devuelve una lista con el elemento eliminado de ella.
             ejemplo:
                 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
@@ -55,17 +55,17 @@ un elemento. Devuelve una lista con el elemento eliminado de ella.
                 numbers = [2, 3, 7, 9]
                 print(remove_item(numbers, 3))  # [2, 7, 9]
 
-13.- Declara una función denominada sum_of_numbers. Esta función toma un 
+13.- Declara una función denominada sum_of_numbers. Esta función toma un
 parámetro numérico (limite) y suma todos los números de ese rango.
             ejemplo:
                 print(sum_of_numbers(5))  # 15
                 print(sum_of_numbers(10)) # 55
                 print(sum_of_numbers(100)) # 5050
 
-14.- Declara una función llamada sum_of_odds_numbers. Esta función toma un parámetro 
+14.- Declara una función llamada sum_of_odds_numbers. Esta función toma un parámetro
 numérico (limite) y suma todos los números impares en ese rango.
 
-15.- Declara una función llamada sum_of_even_numbers. Esta función toma un parámetro 
+15.- Declara una función llamada sum_of_even_numbers. Esta función toma un parámetro
 numérico (limite) y suma todos los números pares en ese rango.
 """
 
@@ -155,7 +155,9 @@ while True:
 
 circle_radius = float(circle_radius)
 print(
-    f"El área de un circulo que tiene un radio de {circle_radius:.2f} es: {calculate_area_of_circle(circle_radius):.2f}"
+    f"El área de un circulo que tiene un radio de {circle_radius:.2f} es: {
+        calculate_area_of_circle(circle_radius):.2f
+    }"
 )
 
 # 3.- Calcular y mostrar la suma de todos los numeros de una cantidad arbitraria de argumentos.
@@ -188,7 +190,8 @@ while True:
     if input("Desea ingresar otro número? (s/n): ").lower() == "n":
         break
 
-print(f"La suma de los números ingresados {numbers} es: {add_all_nums(*numbers)}")
+print(f"La suma de los números ingresados {
+      numbers} es: {add_all_nums(*numbers)}")
 
 
 # 4.- Convertir grados Celsius a Fahrenheit
@@ -208,15 +211,19 @@ def convert_celsius_to_fahrenheit(celsius: float) -> float:
 
 
 while True:
-    temperature_in_celsius = input("Ingrese la temperatura en grados Celsius: ")
+    temperature_in_celsius = input(
+        "Ingrese la temperatura en grados Celsius: ")
     try:
-        temperature_in_celsius = float(temperature_in_celsius)  # Conversion a flotante
+        temperature_in_celsius = float(
+            temperature_in_celsius)  # Conversion a flotante
         break
     except ValueError:
         print("Error. Debe ingresar un número válido.")
 
 print(
-    f"{temperature_in_celsius}°C = {convert_celsius_to_fahrenheit(temperature_in_celsius):.2f}°F"
+    f"{temperature_in_celsius}°C = {
+        convert_celsius_to_fahrenheit(temperature_in_celsius):.2f
+    }°F"
 )
 
 # 5.- Verificar la estación del año, segun mes introducido por el usuario
@@ -270,7 +277,7 @@ while True:
     try:
         if is_integer(month_entered):
             month_entered = int(month_entered)
-            if month_entered not in list(month_name_dict.keys()):
+            if month_entered not in list(month_name_dict):
                 raise ValueError
         else:
             if month_entered.capitalize() not in month_name_dict.values():
@@ -279,7 +286,8 @@ while True:
     except ValueError:
         print("Error. Debe ingresar un mes valido (nombre o numero correcto).")
 
-print(f"El mes ingresado esta en la estacion de {check_seasson(month_entered)}")
+print(f"El mes ingresado esta en la estacion de {
+      check_seasson(month_entered)}")
 
 
 # 6.- Calcular la pendiente o inclinacion de una ecuacion lineal, dado 2 puntos cartesianos
@@ -329,7 +337,9 @@ first_coordinate = get_coordinate()
 second_coordinate = get_coordinate()
 
 print(
-    f"La pendiente de la recta que pasa por los puntos {first_coordinate} y {second_coordinate} es: {calculate_slope(first_coordinate, second_coordinate):.2f}"
+    f"La pendiente de la recta que pasa por los puntos {first_coordinate} y {
+        second_coordinate
+    } es: {calculate_slope(first_coordinate, second_coordinate):.2f}"
 )
 
 
@@ -382,7 +392,9 @@ def get_values() -> tuple:
 
 a, b, c = get_values()
 print(
-    f"Las soluciones de la ecuación cuadrática {a}x² + {b}x + {c} = 0 son: {solve_quadratic_eqn(a, b, c):.2f}"
+    f"Las soluciones de la ecuación cuadrática {a}x² + {b}x + {c} = 0 son: {
+        solve_quadratic_eqn(a, b, c):.2f
+    }"
 )
 
 
@@ -492,7 +504,9 @@ items_list = get_list_from_user_input()
 new_element = input("Ingrese el elemento a agregar a la lista: ")
 
 print(
-    f"Se ha agregado el elemento {new_element} a la lista. Ahora la lista es: {add_item(items_list, new_element)}"
+    f"Se ha agregado el elemento {new_element} a la lista. Ahora la lista es: {
+        add_item(items_list, new_element)
+    }"
 )
 
 
@@ -523,7 +537,9 @@ items_list = get_list_from_user_input()
 element_to_remove = input("Ingrese el elemento a remover a la lista: ")
 
 print(
-    f"Se ha removido el elemento {new_element} de la lista. Ahora la lista es: {remove_item_from_list(items_list, element_to_remove)}"
+    f"Se ha removido el elemento {new_element} de la lista. Ahora la lista es: {
+        remove_item_from_list(items_list, element_to_remove)
+    }"
 )
 
 # 13.- Definir una funcion para sumar todos los numeros de un rango
@@ -566,7 +582,8 @@ def sum_of_evens_numbers(limit: int) -> int:
     Returns:
         int: La suma de todos los números pares del rango.
     """
-    return  sum(num for num in range(limit + 1) if num % 2 == 0)
+    return sum(num for num in range(limit + 1) if num % 2 == 0)
+
 
 while True:
     user_limit = input("Ingrese el maximo de numero a sumar: ")
@@ -577,6 +594,18 @@ while True:
     except ValueError:
         print("Error. Debe ingresar un número válido.")
 
-print(f"La suma de todos los números del 1 al {user_limit} es: {sum_of_numbers(user_limit)}")
-print(f"La suma de los números pares del 1 al {user_limit} es: {sum_of_evens_numbers(user_limit)}")
-print(f"La suma de los números impares del 1 al {user_limit} es: {sum_of_odds_numbers(user_limit)}")
+print(
+    f"La suma de todos los números del 1 al {user_limit} es: {
+        sum_of_numbers(user_limit)
+    }"
+)
+print(
+    f"La suma de los números pares del 1 al {user_limit} es: {
+        sum_of_evens_numbers(user_limit)
+    }"
+)
+print(
+    f"La suma de los números impares del 1 al {user_limit} es: {
+        sum_of_odds_numbers(user_limit)
+    }"
+)

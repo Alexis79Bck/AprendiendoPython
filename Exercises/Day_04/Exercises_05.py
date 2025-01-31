@@ -1,4 +1,4 @@
-'''
+"""
 1.- Declarar una lista vacía
 2.- Declarar una lista con más de 5 elementos
 3.- Encuentra la longitud de tu lista
@@ -38,69 +38,75 @@
     28.4.- Encuentra la edad promedio (suma de todos los elementos dividida por su número)
     28.5.- Encuentra el rango de edades (máximo menos mínimo)
     28.6.- Compare el valor de (mín - promedio) y (máx - promedio), use el método abs()
-'''
+"""
 
 # 1.- Declarar una lista vacía
-print('\n1.- Declarar una lista vacía')
+print("\n1.- Declarar una lista vacía")
 empty_list = []
 
 # 2.- Declarar una lista con más de 5 elementos
-print('\n2.- Declarar una lista con más de 5 elementos')
+print("\n2.- Declarar una lista con más de 5 elementos")
 more_than_five = [1, 2, 3, 4, 5, 6]
 
 # 3.- Encuentra la longitud de tu lista
-print('\n3.- Encuentra la longitud de tu lista')
+print("\n3.- Encuentra la longitud de tu lista")
 length_of_list = len(more_than_five)
 
 # 4.- Obtener el primer elemento, el elemento del medio y el último elemento de la lista.
-print('\n4.- Obtener el primer elemento, el elemento del medio y el último elemento de la lista.')
+print(
+    "\n4.- Obtener el primer elemento, el elemento del medio y el último elemento de la lista."
+)
 first_element = more_than_five[0]
 middle_element = more_than_five[len(more_than_five) // 2]
 last_element = more_than_five[-1]
 
 # 5.- Declara una lista llamada mixed_data_types, coloca tu(nombre, edad, altura, estado civil, dirección)
-print('\n5.- Declara una lista llamada mixed_data_types, coloca tu(nombre, edad, altura, estado civil, nacionalidad)')
+print(
+    "\n5.- Declara una lista llamada mixed_data_types, coloca tu(nombre, edad, altura, estado civil, nacionalidad)"
+)
 mixed_data_types = ["Johnny Bravo", 32, 1.78, "Soltero", "Venezolano"]
 
 # 6.- Declare una variable de lista llamada it_companies y asigne los valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon.
-print('\n6.- Declare una variable de lista llamada it_companies y asigne los valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon.')
+print(
+    "\n6.- Declare una variable de lista llamada it_companies y asigne los valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon."
+)
 it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
 
 # 7.- Imprima la lista usando print()
-print('\n7.- Imprima la lista usando print()')
+print("\n7.- Imprima la lista usando print()")
 print(it_companies)
 
 # 8.- Imprima el número de empresas en la lista
-print('\n8.- Imprima el número de empresas en la lista')
+print("\n8.- Imprima el número de empresas en la lista")
 print(len(it_companies))
 
 # 9.- Imprima la primera, la segunda y la última empresa.
-print('\n9.- Imprima la primera, la segunda y la última empresa.')
+print("\n9.- Imprima la primera, la segunda y la última empresa.")
 print(it_companies[0], it_companies[1], it_companies[-1])
 
 # 10.- Imprima el listado después de modificar una de las empresas
-print('\n10.- Imprima el listado después de modificar una de las empresas.')
+print("\n10.- Imprima el listado después de modificar una de las empresas.")
 it_companies[0] = "Meta"
 print(it_companies)
 
 # 11.- Añadir una empresa de TI a it_companies
-print('\n11.- Añadir una empresa de TI a it_companies.')
+print("\n11.- Añadir una empresa de TI a it_companies.")
 it_companies.append("Tesla")
 print(it_companies)
 
 # 12.- Insertar una empresa de TI en el medio de la lista de empresas
-print('\n12.- Insertar una empresa de TI en el medio de la lista de empresas.')
+print("\n12.- Insertar una empresa de TI en el medio de la lista de empresas.")
 it_companies.insert(len(it_companies) // 2, "Twitter")
 print(it_companies)
 
 # 13.- Cambie uno de los nombres de it_companies a mayúsculas (¡IBM excluido!)
-print('\n13.- Cambie uno de los nombres de it_companies a mayúsculas (¡IBM excluido!).')
+print("\n13.- Cambie uno de los nombres de it_companies a mayúsculas (¡IBM excluido!).")
 it_companies[1] = it_companies[1].upper()
 print(it_companies)
 
 # 14.- Unir it_companies con una cadena '#; '
 print("\n14.- Unir it_companies con una cadena '#; '.")
-joined_companies = '#; '.join(it_companies)
+joined_companies = "#; ".join(it_companies)
 print(joined_companies)
 
 # 15.- Comprueba si una determinada empresa existe en la lista it_companies.
@@ -159,21 +165,25 @@ print("\n25.- Destruir la lista de empresas de TI")
 del it_companies
 
 # 26.- Une las siguientes listas:
-print('''\n26.- Une las siguientes listas:
+print(
+    """\n26.- Une las siguientes listas:
         front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
         back_end = ['Node', 'Express', 'MongoDB']      
-      ''')
-front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-back_end = ['Node', 'Express', 'MongoDB']
+      """
+)
+front_end = ["HTML", "CSS", "JS", "React", "Redux"]
+back_end = ["Node", "Express", "MongoDB"]
 full_stack = front_end + back_end
 print(full_stack)
 
-# 27.- Después de unir las listas en la pregunta 26. 
-# Copie la lista unida y asígnela a una variable full_stack, 
+# 27.- Después de unir las listas en la pregunta 26.
+# Copie la lista unida y asígnela a una variable full_stack,
 # luego inserte Python y SQL después de Redux.
-print("\n27.- Copie la lista unida y asígnela a una variable full_stack, luego inserte Python y SQL después de Redux.")
-full_stack.insert(full_stack.index('Redux') + 1, 'Python')
-full_stack.insert(full_stack.index('Python') + 1, 'SQL')
+print(
+    "\n27.- Copie la lista unida y asígnela a una variable full_stack, luego inserte Python y SQL después de Redux."
+)
+full_stack.insert(full_stack.index("Redux") + 1, "Python")
+full_stack.insert(full_stack.index("Python") + 1, "SQL")
 print(full_stack)
 
 # 28.- La siguiente es una lista de 10 estudiantes por edades
@@ -194,9 +204,9 @@ print(f"28.2.- Lista con edades min y max agregadas: {students_ages}")
 sorted_ages = sorted(students_ages)
 n = len(sorted_ages)
 if n % 2 == 0:
-    median = (sorted_ages[n//2 - 1] + sorted_ages[n//2]) / 2
+    median = (sorted_ages[n // 2 - 1] + sorted_ages[n // 2]) / 2
 else:
-    median = sorted_ages[n//2]
+    median = sorted_ages[n // 2]
 print(f"28.3.- Edad media: {median}")
 
 # 28.4.- Encuentra la edad promedio
@@ -205,10 +215,9 @@ print(f"28.4.- Edad promedio: {average_age}")
 
 # 28.5.- Encuentra el rango de edades
 age_range = max_age - min_age
-print(f"28.5.- Rango de edades: {age_range}" )
+print(f"28.5.- Rango de edades: {age_range}")
 
 # 28.6.- Compara el valor de (mín - promedio) y (máx - promedio)
 min_diff = abs(min_age - average_age)
 max_diff = abs(max_age - average_age)
-print(f"28.6.- Diferencia con promedio - Mínima: {min_diff} Máxima: {max_diff}", )
-
+print(f"28.6.- Diferencia con promedio - Mínima: {min_diff} Máxima: {max_diff}")
