@@ -71,7 +71,7 @@ def calculate_area():
     while True:
         # Mostrar menú
         print("\nSeleccione una figura geométrica:")
-        for key, value in helpers.FIGURES_NAMES.items():
+        for key, value in helpers.OPTIONS_MENU.items():
             print(f"{key}. {value}")
         print("0. Salir")
 
@@ -83,7 +83,8 @@ def calculate_area():
             break
 
         # Obtener figura y fórmula
-        figure_selected = helpers.FIGURES_NAMES[selected_option]
+        figure_selected = helpers.OPTIONS_MENU[selected_option]
+        figure_name = helpers.FIGURES_NAMES[selected_option]
         formula = helpers.get_figure_formula(figure_selected)
 
         # Mostrar fórmula
@@ -91,7 +92,7 @@ def calculate_area():
 
         # Obtener parámetros (usando getattr para hacerlo dinámico)
         # --Construye el nombre de la función dinamicamente
-        input_function_name = f"input_{figure_selected.lower()}_params"
+        input_function_name = f"input_{figure_name.lower()}_params"
         input_function = getattr(helpers, input_function_name)
         params = input_function()
 
@@ -100,6 +101,7 @@ def calculate_area():
 
         # Mostrar resultado
         print(f"El área del {figure_selected.lower()} es: {area}")
+    input()
 
 # 1.-
 print("\n1.- Filtrar solo los negativos y ceros en la lista usando la comprensión de listas")
@@ -214,7 +216,7 @@ print("\n9.- Escriba una función lambda que pueda resolver el área de un rect�
 
 while True:
     try:
-        circle_radius = helpers.input_circle_params()
+        circle_radius = helpers.input_circle_params()[0]
 
         # Validar que la base y la altura sean positivas
         if circle_radius <= 0:

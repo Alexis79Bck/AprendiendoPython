@@ -10,6 +10,20 @@ incluye:
 
 from math import pi, tan
 
+# Diccionario de menú de opciones
+OPTIONS_MENU = {
+    1: "Círculo",
+    2: "Triángulo",
+    3: "Cuadrado",
+    4: "Trapecio",
+    5: "Rombo",
+    6: "Rectángulo",
+    7: "Paralelogramo",
+    8: "Pentágono",
+    9: "Hexágono",
+    10: "Heptágono"
+}
+
 # Diccionario de formulas de figuras geométricas
 FIGURES_FORMULA = {
     "Círculo": "Área = π * r^2",
@@ -26,16 +40,16 @@ FIGURES_FORMULA = {
 
 # Diccionario de nombres de figuras geométricas para el menú
 FIGURES_NAMES = {
-    1: "Círculo",
-    2: "Triángulo",
-    3: "Cuadrado",
-    4: "Trapecio",
-    5: "Rombo",
-    6: "Rectángulo",
-    7: "Paralelogramo",
-    8: "Pentágono",
-    9: "Hexágono",
-    10: "Heptágono"
+    1: "circle",
+    2: "triangle",
+    3: "square",
+    4: "trapezoid",
+    5: "rhombus",
+    6: "rectangle",
+    7: "parallelogram",
+    8: "pentagon",
+    9: "hexagon",
+    10: "heptagon"
 }
 
 # Diccionario de funciones lambda para áreas de figuras geométricas
@@ -118,10 +132,10 @@ def input_values_x_y() -> tuple:
     return x, y
 
 
-def input_circle_params() -> int:
+def input_circle_params() -> tuple:
     """Solicitar el parametro del circulo"""
     radius = validate_int_input("Ingrese el radio: ")
-    return radius
+    return radius,
 
 
 def input_triangle_params() -> tuple:
@@ -173,19 +187,19 @@ def input_pentagon_params() -> tuple:
     return side, apothem
 
 
-def input_hexagon_params() -> int:
+def input_hexagon_params() -> tuple:
     """Solicitar los parametros lado"""
     side = validate_int_input("Ingrese el lado: ")
-    return side
+    return side,
 
 
-def input_heptagon_params() -> int:
+def input_heptagon_params() -> tuple:
     """Solicitar los parametros lado"""
     side = validate_int_input("Ingrese el lado: ")
-    return side
+    return side,
 
 
 def select_option() -> int:
     """Solicitar que seleccione una opcion del menu"""
-    option_selected = validate_option_selected("Debe seleccionar una opción válida.")
+    option_selected = validate_option_selected("Debe seleccionar una opción válida: ")
     return option_selected
